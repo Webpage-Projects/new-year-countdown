@@ -1,3 +1,5 @@
+const song = document.getElementById("newYearSong");
+
 let now = new Date();
 let arr = [0, 0, 0, 0, 0];
 
@@ -89,6 +91,17 @@ function writeDate() {
       origin: { y: 1.2 },
     });
   }
+
+  if (
+    (arr[4] === 48 &&
+      arr[3] === 0 &&
+      arr[2] === 0 &&
+      arr[1] === 0 &&
+      arr[0] === 0)
+  ) {
+    song.play();
+  }
+
   sections[4].style.display = "flex";
 
   mon.innerText = pad(arr[0]);
